@@ -50,8 +50,8 @@ RUN yes | cp -rf www/ /var/www/html
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
-Run /etc/init.d/apache2 start
-
+#Run /etc/init.d/apache2 start
+CMD apachectl -D FOREGROUND
 #CMD["service","apache2","restart"]
 #RUN cordova platform add browser
 
